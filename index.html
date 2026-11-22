@@ -245,7 +245,27 @@ body.it-review #results{display:none!important}
 #it-step-alloggi:checked~.it-steps .it-step-alloggi,#it-step-colazione:checked~.it-steps .it-step-colazione,#it-step-pranzo:checked~.it-steps .it-step-pranzo,#it-step-cena:checked~.it-steps .it-step-cena{background:#fff2eb;border:2px solid #ec7943;padding:17px}
 .it-workspace{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:24px;align-items:start}.it-pane{display:none}#it-step-alloggi:checked~.it-workspace .it-pane-alloggi,#it-step-colazione:checked~.it-workspace .it-pane-colazione,#it-step-pranzo:checked~.it-workspace .it-pane-pranzo,#it-step-cena:checked~.it-workspace .it-pane-cena{display:block}.it-section-title{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:20px}.it-section-title h3{font-size:clamp(23px,3vw,32px);line-height:1.2;margin:9px 0 6px;color:#12333d}.it-section-title p{font-size:14px;color:#6d8389;margin:0}.it-count{white-space:nowrap;font-size:12px;color:#59717a;background:#eaf0f0;padding:9px 12px;border-radius:30px}.it-offers{display:grid;gap:18px}.it-offer{display:grid;grid-template-columns:36% minmax(0,1fr);border:1px solid #e2e8e9;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 9px 30px #12333d0b}.it-image{position:relative;min-height:230px;background:#dce6e6}.it-image img{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.it-image span{position:absolute;left:14px;top:14px;background:#12333de8;color:#fff;border-radius:7px;padding:8px 10px;font-size:10px;letter-spacing:1px;font-weight:800}.it-offer-body{padding:22px;display:flex;flex-direction:column;min-width:0}.it-type{font-size:10px;color:#c76a3b;letter-spacing:1.2px;font-weight:800}.it-offer h4{font-size:22px;line-height:1.15;color:#12333d;margin:9px 0 10px}.it-distance{font-size:13px;color:#46616a;margin:0 0 12px}.it-note{font-size:13px;line-height:1.5;color:#71858a;margin:0 0 20px}.it-offer-bottom{margin-top:auto;border-top:1px solid #e7ecec;padding-top:16px;display:flex;justify-content:space-between;gap:10px;align-items:center}.it-offer-bottom strong{display:block;font-size:24px;color:#12333d}.it-offer-bottom small{display:block;color:#71858a;font-size:11px}.it-choose{border:0;background:#e97b45;color:white;border-radius:11px;padding:12px 16px;font-size:13px;font-weight:750;cursor:pointer;white-space:nowrap}.it-choose.is-picked{background:#12333d}.it-summary{position:sticky;top:18px;background:#f0f5f3;border-radius:22px;padding:24px}.it-summary h3{font-size:24px;line-height:1.15;color:#12333d;margin:12px 0}.it-summary p{font-size:13px;line-height:1.6;color:#617980}.it-summary-progress{display:flex;align-items:baseline;gap:10px;border-top:1px solid #d7e2df;border-bottom:1px solid #d7e2df;padding:18px 0;margin:20px 0}.it-summary-progress strong{font-size:38px;color:#e97b45}.it-summary-progress span{font-size:12px;color:#506c72}.it-summary-steps{font-size:13px;line-height:2.4;color:#34555d;margin-bottom:18px}.it-summary>small{font-size:11px;line-height:1.5;color:#7d9094;display:block}
 @media(max-width:760px){.it-plan{padding:0 12px}.it-head{padding:24px 20px;border-radius:20px}.it-trip{gap:7px}.it-trip span{font-size:11px;padding:9px}.it-steps{gap:7px}.it-step{min-height:82px;padding:10px 8px;border-radius:12px;gap:8px}.it-step strong{font-size:12px}.it-step small{font-size:9px}.it-step-arrow{display:none}#it-step-alloggi:checked~.it-steps .it-step-alloggi,#it-step-colazione:checked~.it-steps .it-step-colazione,#it-step-pranzo:checked~.it-steps .it-step-pranzo,#it-step-cena:checked~.it-steps .it-step-cena{padding:9px 7px}.it-workspace{display:flex;flex-direction:column}.it-main,.it-summary{width:100%}.it-summary{position:static}.it-offer{grid-template-columns:1fr}.it-image{height:190px;min-height:190px}.it-offer-body{padding:17px}.it-offer h4{font-size:20px}.it-section-title{align-items:start}.it-count{font-size:10px;padding:7px}}
-</style></head>
+</style>
+<style id="it-recap-screen-fix">
+/* Schermata riepilogo separata: non è un elemento in fondo ai risultati */
+#itCheckout {display:none!important}
+body.it-review {overflow:hidden!important}
+body.it-review #itCheckout {
+ display:block!important;position:fixed!important;inset:0!important;
+ z-index:2147483000!important;overflow-y:auto!important;overscroll-behavior:contain;
+ box-sizing:border-box!important;width:100vw!important;max-width:none!important;
+ height:100dvh!important;min-height:100vh!important;margin:0!important;
+ padding:24px max(18px,calc((100vw - 900px)/2)) 60px!important;
+ border-radius:0!important;background:#f8f7f3!important;
+ -webkit-overflow-scrolling:touch;
+}
+body.it-review #itCheckoutContent{display:block!important}
+@media print {
+ body.it-review {overflow:visible!important}
+ body.it-review #itCheckout {position:static!important;height:auto!important;overflow:visible!important}
+}
+</style>
+</head>
 <body>
 <header>
 <div class="container nav">
@@ -437,6 +457,8 @@ function summary(){
  '<p class="it-muted">Simulazione senza prenotazione. Prezzi e distanze inventati. Alloggio, colazione e cena conteggiati per notte; pranzo per giornata lavorativa. Esclusi extra, imposte e trasporti.</p>';
  $("itCheckoutContent").innerHTML=html;
  document.body.classList.add("it-review");
+ if(location.hash!=="#riepilogo")history.pushState({intrasferta:"recap"},"","#riepilogo");
+ $("itCheckout").scrollTop=0;
  window.scrollTo(0,0);
 }
 function start(e){
@@ -464,6 +486,7 @@ $("findSolutions")?.addEventListener("click",start);
 $("itOpenReview")?.addEventListener("click",summary);
 $("itEdit")?.addEventListener("click",()=>{document.body.classList.remove("it-review");location.hash="results";sync();});
 $("itPrint")?.addEventListener("click",()=>window.print());
+window.addEventListener("popstate",()=>{if(location.hash!=="#riepilogo")document.body.classList.remove("it-review");});
 applyRequested();sync();
 })();
 </script></body>
