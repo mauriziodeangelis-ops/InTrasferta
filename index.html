@@ -265,6 +265,62 @@ body.it-review #itCheckoutContent{display:block!important}
  body.it-review #itCheckout {position:static!important;height:auto!important;overflow:visible!important}
 }
 </style>
+
+<style id="it-recap-premium">
+body.it-review #itCheckout{background:#f4f6f5!important;color:#17363d!important;padding:28px max(20px,calc((100vw - 1040px)/2)) 70px!important}
+body.it-review #itCheckout>.it-review-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
+body.it-review #itCheckout>h2{font-size:clamp(27px,4vw,39px);line-height:1.13;margin:12px 0 5px;color:#153c43}
+body.it-review #itCheckout>p{color:#687c80;margin:0 0 24px}
+.it-recap-hero{background:linear-gradient(115deg,#123a42,#205965);color:white;border-radius:22px;padding:clamp(22px,4vw,40px);display:flex;justify-content:space-between;align-items:center;gap:25px;margin:22px 0;box-shadow:0 16px 40px #163b4220}
+.it-recap-eyebrow{color:#f4bc72;font-size:11px;letter-spacing:2px;font-weight:800}
+.it-recap-hero h3{font-size:clamp(25px,3vw,36px);line-height:1.1;margin:12px 0;color:white}
+.it-recap-hero p{color:#d7e5e7;max-width:360px;line-height:1.6;margin:0}
+.it-recap-hero-total{min-width:220px;border-left:1px solid #ffffff40;padding-left:26px;display:flex;flex-direction:column;gap:5px}
+.it-recap-hero-total span,.it-recap-hero-total small{color:#d7e5e7}
+.it-recap-hero-total strong{font-size:clamp(28px,3.7vw,40px);white-space:nowrap;color:white}
+.it-recap-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 32px}
+.it-recap-overview>div{background:white;border:1px solid #e2e9e7;border-radius:14px;padding:17px 18px;display:flex;flex-direction:column;gap:9px}
+.it-recap-overview span{font-size:10px;font-weight:800;letter-spacing:1px;color:#698087}
+.it-recap-overview strong{font-size:15px;overflow-wrap:anywhere;color:#183d45}
+.it-recap-section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:30px 0 16px}
+.it-recap-section-title span{font-size:12px;letter-spacing:1.6px;font-weight:900;color:#18434a}
+.it-recap-section-title strong{font-size:12px;color:#61787d}
+.it-recap-choice{display:grid;grid-template-columns:minmax(210px,35%) 1fr;overflow:hidden;background:white;border:1px solid #dfe8e5;border-radius:19px;margin:15px 0;box-shadow:0 8px 25px #173c4210}
+.it-recap-photo{position:relative;min-height:265px;background:#dce4e2}
+.it-recap-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;display:block}
+.it-recap-photo-tag{position:absolute;left:15px;top:15px;background:#fff;color:#16434b;padding:8px 13px;border-radius:40px;font-size:12px;font-weight:800;box-shadow:0 4px 15px #0002}
+.it-recap-placeholder{height:100%;display:grid;place-items:center;color:#587278;font-weight:800}
+.it-recap-details{padding:24px 28px;min-width:0}
+.it-recap-order{font-size:10px;font-weight:900;letter-spacing:1.5px;color:#c07930}
+.it-recap-details h3{font-size:clamp(21px,2.7vw,27px);margin:8px 0 18px;color:#143a42}
+.it-recap-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px}
+.it-recap-facts>div{display:flex;flex-direction:column;gap:4px}
+.it-recap-facts span{font-size:12px;color:#647b81}
+.it-recap-facts strong{font-size:14px;color:#153e46}
+.it-recap-price-line{border-top:1px solid #e8eeec;margin-top:21px;padding-top:17px;display:flex;justify-content:space-between;gap:16px}
+.it-recap-price-line>div{display:flex;flex-direction:column;gap:6px}
+.it-recap-price-line>div:last-child{text-align:right}
+.it-recap-price-line span{font-size:11px;color:#698087}
+.it-recap-price-line strong{font-size:18px;color:#183f46}
+.it-recap-price-line small{font-size:11px;font-weight:500;color:#698087}
+.it-recap-price-line .it-recap-subtotal{font-size:24px;color:#bb7131}
+.it-recap-grand{background:#163e47;border-radius:20px;color:white;padding:28px 34px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin:26px 0 14px}
+.it-recap-grand span{font-size:10px;letter-spacing:1.5px;color:#f1ba74;font-weight:800}
+.it-recap-grand h3{font-size:25px;color:white;margin:8px 0}
+.it-recap-grand p{color:#d6e4e6;margin:0}
+.it-recap-grand>strong{font-size:clamp(26px,4vw,40px);white-space:nowrap;color:white}
+.it-recap-disclaimer{font-size:12px;line-height:1.7;color:#6c7e83;padding:8px 2px 20px}
+@media(max-width:650px){
+ .it-recap-hero,.it-recap-grand{flex-direction:column;align-items:stretch}
+ .it-recap-hero-total{border-left:0;border-top:1px solid #ffffff40;padding:16px 0 0;min-width:0}
+ .it-recap-overview{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .it-recap-choice{grid-template-columns:1fr}
+ .it-recap-photo{min-height:210px}
+ .it-recap-details{padding:20px}
+ .it-recap-grand>strong{white-space:normal}
+}
+@media(max-width:380px){.it-recap-overview{grid-template-columns:1fr}.it-recap-facts{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header>
@@ -428,38 +484,54 @@ function step(k){
  if(pane)pane.scrollIntoView({block:"start",behavior:"auto"});
 }
 function summary(){
- sync();const people=Math.max(1,Number(get("workers"))||4),p=dates();
- let total=0,complete=requested.length>0&&requested.every(k=>chosen(k))&&!!p;
- let html='<div class="it-review-card"><h3>Informazioni della trasferta</h3>'+
- '<p><strong>Luogo di lavoro:</strong> '+escape(get("workplace")||"Non indicato")+'</p>'+
- '<p><strong>Periodo:</strong> '+escape(get("arrival")||"Non indicato")+' – '+escape(get("departure")||"Non indicato")+'</p>'+
- '<p><strong>Personale:</strong> '+people+' persone</p>'+
- '<p><strong>Notti previste:</strong> '+(p?p.nights:"Date non indicate")+'</p>'+
- '<p><strong>Rientro nel weekend:</strong> '+($("weekendHome")?.checked?"Sì":"No")+'</p></div>';
+ sync();
+ const people=Math.max(1,Number(get("workers"))||4),p=dates();
+ const complete=requested.length>0&&requested.every(k=>chosen(k))&&!!p;
+ let total=0,entries=[];
+ const icons={alloggi:"⌂",colazione:"☕",pranzo:"☀",cena:"☾"};
  for(const k of requested){
- const o=offer(k);if(!o)continue;
- const name=o.querySelector("h4")?.textContent.trim()||"Proposta dimostrativa";
- const raw=o.querySelector(".it-choose")?.dataset.price||"0";
- const unit=Number(raw.replace(/[^\d,.]/g,"").replace(",","."))||0;
- const quantity=p?(k==="pranzo"?p.lunches:p.nights):null;
- const subtotal=quantity===null?null:unit*people*quantity;
- if(subtotal!==null)total+=subtotal;
- const work=k==="alloggi"?(o.querySelector(".it-offer-body")?.textContent.match(/\d+[,.]\d+\s*km/)||[])[0]:o.querySelector('[data-distance-value="work"]')?.textContent;
- const hotel=k==="alloggi"?"":o.querySelector('[data-distance-value="hotel"]')?.textContent;
- html+='<article class="it-review-card"><div class="it-review-row"><span class="it-kicker">'+names[k].toUpperCase()+'</span><strong>'+(subtotal===null?"Da calcolare":eur(subtotal))+'</strong></div><h3>'+escape(name)+'</h3>'+
- (work?'<p><strong>Distanza dal luogo di lavoro:</strong> '+escape(work)+'</p>':"")+
- (hotel?'<p><strong>Distanza dall’alloggio:</strong> '+escape(hotel)+'</p>':"")+
- '<p><strong>Prezzo unitario:</strong> '+eur(unit)+' per persona / '+(k==="alloggi"?"notte":"servizio")+'</p>'+
- '<p><strong>Calcolo:</strong> '+people+' persone × '+(quantity===null?"giorni da definire":quantity+(k==="alloggi"?" notti":" servizi"))+'</p>'+
- (k==="alloggi"?'<p><strong>Camere richieste:</strong> '+escape($("rooms")?.selectedOptions?.[0]?.textContent||"Non specificate")+'</p>':"")+'</article>';
+  const o=offer(k);if(!o)continue;
+  const name=o.querySelector("h4")?.textContent.trim()||"Proposta dimostrativa";
+  const img=o.querySelector("img")?.getAttribute("src")||"";
+  const raw=o.querySelector(".it-choose")?.dataset.price||"0";
+  const unit=Number(raw.replace(/[^\d,.]/g,"").replace(",","."))||0;
+  const quantity=p?(k==="pranzo"?p.lunches:p.nights):null;
+  const subtotal=quantity===null?null:unit*people*quantity;
+  if(subtotal!==null)total+=subtotal;
+  const work=k==="alloggi"?(o.querySelector(".it-offer-body")?.textContent.match(/\d+[,.]\d+\s*km/)||[])[0]:o.querySelector('[data-distance-value="work"]')?.textContent;
+  const hotel=k==="alloggi"?"":o.querySelector('[data-distance-value="hotel"]')?.textContent;
+  entries.push({k,name,img,unit,quantity,subtotal,work,hotel});
  }
- html+='<div class="it-total"><div>TOTALE INDICATIVO DELLA TRASFERTA</div><strong>'+(complete?eur(total):"Da calcolare")+'</strong><div>Totale per il personale e il periodo indicati</div></div>'+
- '<p class="it-muted">Simulazione senza prenotazione. Prezzi e distanze inventati. Alloggio, colazione e cena conteggiati per notte; pranzo per giornata lavorativa. Esclusi extra, imposte e trasporti.</p>';
+ let html='<div class="it-recap-hero"><div><span class="it-recap-eyebrow">IL TUO PIANO · INTRASFERTA</span><h3>La trasferta è organizzata.</h3><p>Una panoramica chiara delle soluzioni scelte per la tua squadra.</p></div><div class="it-recap-hero-total"><span>Totale stimato</span><strong>'+(complete?eur(total):"Da calcolare")+'</strong><small>per l’intera trasferta</small></div></div>';
+ html+='<div class="it-recap-overview">'+
+ '<div><span>📍 LUOGO DI LAVORO</span><strong>'+escape(get("workplace")||"Non indicato")+'</strong></div>'+
+ '<div><span>📅 PERIODO</span><strong>'+escape(get("arrival")||"—")+' → '+escape(get("departure")||"—")+'</strong></div>'+
+ '<div><span>👷 PERSONALE</span><strong>'+people+' persone</strong></div>'+
+ '<div><span>🌙 PERNOTTAMENTI</span><strong>'+(p?p.nights+" notti":"Da definire")+'</strong></div>'+
+ '<div><span>🏠 WEEKEND</span><strong>'+($("weekendHome")?.checked?"Rientro a casa":"Permanenza prevista")+'</strong></div>'+
+ '</div>';
+ html+='<div class="it-recap-section-title"><span>LE SOLUZIONI CHE HAI SCELTO</span><strong>'+entries.length+' servizi</strong></div>';
+ for(let i=0;i<entries.length;i++){
+  const e=entries[i],qty=e.quantity===null?"Da definire":e.quantity;
+  const unitLabel=e.k==="alloggi"?"notte":"pasto";
+  html+='<article class="it-recap-choice">'+
+  '<div class="it-recap-photo">'+(e.img?'<img src="'+escape(e.img)+'" alt="Foto dimostrativa di '+escape(e.name)+'" loading="lazy">':'<div class="it-recap-placeholder">INTRASFERTA</div>')+
+  '<span class="it-recap-photo-tag">'+escape(names[e.k])+'</span></div>'+
+  '<div class="it-recap-details"><div class="it-recap-order">0'+(i+1)+' / '+escape(names[e.k].toUpperCase())+'</div>'+
+  '<h3>'+escape(e.name)+'</h3><div class="it-recap-facts">'+
+  (e.work?'<div><span>📍 Dal luogo di lavoro</span><strong>'+escape(e.work)+'</strong></div>':'')+
+  (e.hotel?'<div><span>🏨 Dall’alloggio scelto</span><strong>'+escape(e.hotel)+'</strong></div>':'')+
+  (e.k==="alloggi"?'<div><span>🛏 Camere richieste</span><strong>'+escape($("rooms")?.selectedOptions?.[0]?.textContent||"Da definire")+'</strong></div>':'')+
+  '<div><span>👥 Persone</span><strong>'+people+'</strong></div>'+
+  '<div><span>🗓 Quantità prevista</span><strong>'+qty+' '+(e.k==="alloggi"?"notti":"pasti per persona")+'</strong></div>'+
+  '</div><div class="it-recap-price-line"><div><span>Prezzo unitario</span><strong>'+eur(e.unit)+' <small>/ persona / '+unitLabel+'</small></strong></div><div><span>Subtotale</span><strong class="it-recap-subtotal">'+(e.subtotal===null?"Da calcolare":eur(e.subtotal))+'</strong></div></div></div></article>';
+ }
+ html+='<div class="it-recap-grand"><div><span>RIEPILOGO ECONOMICO</span><h3>Totale stimato</h3><p>'+people+' persone · '+entries.length+' servizi selezionati</p></div><strong>'+(complete?eur(total):"Da calcolare")+'</strong></div>'+
+ '<p class="it-recap-disclaimer">Questa è una simulazione: strutture, fotografie, distanze e prezzi sono dimostrativi e non prenotabili. Il totale non comprende eventuali extra, imposte e trasporti. Alloggio, colazione e cena sono stimati per notte; pranzo per giornata lavorativa.</p>';
  $("itCheckoutContent").innerHTML=html;
  document.body.classList.add("it-review");
  if(location.hash!=="#riepilogo")history.pushState({intrasferta:"recap"},"","#riepilogo");
- $("itCheckout").scrollTop=0;
- window.scrollTo(0,0);
+ $("itCheckout").scrollTop=0;window.scrollTo(0,0);
 }
 function start(e){
  if(e)e.preventDefault();
